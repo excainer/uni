@@ -22,7 +22,7 @@ public class vector {
             System.out.println("No hay personas registradas.");
             return;
         }
-        System.out.println("\n=== LISTA DE PERSONAS ===");
+        System.out.println("\n LISTA DE PERSONAS ");
         for (int i = 0; i < contador; i++) {
             System.out.println("Persona #" + (i + 1));
             personas[i].mostrarInfo(); // aquí imprime la info de cada persona

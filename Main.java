@@ -27,17 +27,16 @@ public class Main {
                 case 1: // Agregar
                     System.out.print("Nombre: ");
                     String nombre = sc.nextLine();
-
                     System.out.print("Apellido: ");
                     String apellido = sc.nextLine();
 
-                    System.out.print("Altura (m) [Enter para dejar vacío]: ");
-                    String alturaInput = sc.nextLine();
-                    double altura = alturaInput.isEmpty() ? 0.0 : Double.parseDouble(alturaInput);
+                    System.out.print("Altura (m) [ENTER para omitir]: ");
+                    String alturaStr = sc.nextLine();
+                    double altura = alturaStr.isEmpty() ? 0 : Double.parseDouble(alturaStr);
 
-                    System.out.print("Peso (kg) [Enter para dejar vacío]: ");
-                    String pesoInput = sc.nextLine();
-                    double peso = pesoInput.isEmpty() ? 0.0 : Double.parseDouble(pesoInput);
+                    System.out.print("Peso (kg) [ENTER para omitir]: ");
+                    String pesoStr = sc.nextLine();
+                    double peso = pesoStr.isEmpty() ? 0 : Double.parseDouble(pesoStr);
 
                     Persona p = new Persona(nombre, apellido, altura, peso);
                     vector.agregarPersona(p);
@@ -71,4 +70,3 @@ public class Main {
         sc.close();
     }
 }
-
